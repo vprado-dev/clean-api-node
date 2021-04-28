@@ -1,0 +1,8 @@
+{
+  "name": "clean-api-node",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:VinicinhuSZ/clean-api-node.git",
+  "author": "Vinicius Prado <vinicavagna@gmail.com>",
+  "license": "MIT"
+}
