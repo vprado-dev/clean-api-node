@@ -16,16 +16,19 @@
     "lint-staged": "^10.5.4",
     "prettier": "^2.2.1",
     "ts-jest": "^26.5.5",
+    "ts-node": "^9.1.1",
     "typescript": "^4.2.4"
   },
   "dependencies": {},
   "scripts": {
-    "test": "jest"
+    "test": "jest",
+    "test:staged": "jest"
   },
   "lint-staged": {
     "*.{js,ts}": [
-      "eslint",
-      "prettier --check"
+      "eslint --max-warnings=0",
+      "prettier --check",
+      "yarn test:staged"
     ]
   }
 }
