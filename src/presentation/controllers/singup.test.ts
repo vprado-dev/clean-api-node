@@ -1,8 +1,7 @@
-import { SingUpController } from './singup';
+import { singUp } from './singup';
 
 describe('SingUp Controller', () => {
   test('Should return 400 if no name is provider', () => {
-    const sut = new SingUpController();
     const httpRequest = {
       body: {
         email: 'any_email@mail.com',
@@ -10,7 +9,8 @@ describe('SingUp Controller', () => {
         passwordConfirmation: 'any_password',
       },
     };
-    const httpResponse = sut.handle(httpRequest);
-    expect(httpResponse.statusCode).toBe(400);
+    const httpResponse = singUp(httpRequest);
+    expect(httpResponse?.statusCode).toBe(400);
+    expect(httpResponse?.body).toEqual(new Error('Missing param: name'));
   });
 });
