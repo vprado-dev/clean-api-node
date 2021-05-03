@@ -23,7 +23,7 @@
   },
   "dependencies": {},
   "scripts": {
-    "test": "jest"
+    "test": "jest --passWithNoTests"
   },
   "lint-staged": {
     "*.{js,ts}": [
